@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffc0cb;
+  padding: 15px 30px;
+}
+
+nav a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #333;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  background: white;
+  padding: 30px;
+}
+
+.hero h1 {
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  color: #ffc0cb;
+  padding: 30px;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+/* Container fylder 100% af forældreelementet */
+.hero-img {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Billedet fylder hele containeren */
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* fjerner evt. lille luft under img */
+}
+
+/* Øverste knapper i actions */
+.actions {
+  display: flex; /* gør container til flex */
+  justify-content: center; /* centrer horisontalt */
+  gap: 20px; /* afstand mellem knapper */
+  margin-bottom: 30px; /* lidt luft under */
+}
+
+/* Knapperne */
+.actions .action-btn,
+.more-btn {
+  display: inline-block; /* beholder knap-look */
+  padding: 12px 25px;
+  background-color: #b8f2e6;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.actions .action-btn:hover,
+.more-btn:hover {
+  background-color: #a0e0d6;
+}
+
+/* Container centrerer indholdet */
+.more-container {
+  text-align: center;
+  margin-top: 30px; /* lidt afstand til billederne */
+  margin-bottom: 50px;
+}
+
+/* Knappen forbliver inline-block */
+.more-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #b8f2e6;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.more-btn:hover {
+  background-color: #a0e0d6;
+}
+
+/* PRODUKTER */
+.simple-grid {
+  display: flex;
+  gap: 100px; /* mellemrum mellem billederne */
+  justify-content: center; /* centrerer alle items */
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Hvert billede + tekst */
+.simple-grid .item {
+  text-align: center; /* centrer tekst under billede */
+}
+
+/* Billederne fylder ens størrelse */
+.simple-grid .item img {
+  width: 300px; /* billedestørrelse */
+  height: 300px;
+  object-fit: cover; /* fylder hele billedet uden at strække */
+  display: block;
+  margin-bottom: 10px; /* lidt afstand til teksten */
+}
+
+/* Teksten under billedet */
+.simple-grid .item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* SE FLERE */
+.more {
+  display: block;
+  margin: 20px auto;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: #ffc0cb;
+  padding: 30px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials div {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+}
+
+/* ===== SORTIMENT SIDE ===== */
+
+.title {
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  color: #ffc0cb;
+  padding: 30px;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px;
+}
+
+.ice {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ice:hover {
+  transform: scale(1.03);
+}
+
+/* sørg for billedet fylder korrekt */
+.img-wrapper {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* overlay farver */
+.available .img-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 0, 0.3);
+  top: 0;
+  left: 0;
+}
+
+.not-available .img-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+}
+
+.img:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.bottom {
+  background: #b8f2e6;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.bulb {
+  background: none;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.allergy {
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* FARVER */
+.available .img {
+  background: lightgreen;
+}
+
+.not-available .img {
+  background: lightcoral;
+}
+
+/* HOVER (bonus) */
+.ice:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* ===== Kontakt SIDE ===== */
+.title {
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  color: #ffc0cb;
+  margin: 30px 0;
+}
+
+/* TOP SEKTION */
+.contact-top {
+  display: flex;
+  margin: 40px;
+  gap: 20px;
+}
+
+.info {
+  background: #ffc0cb;
+  padding: 30px;
+  flex: 1;
+}
+
+.map {
+  flex: 1;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* FORM */
+.contact-form {
+  background: #b8f2e6;
+  margin: 40px;
+  padding: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background: #ffc0cb;
+}
+
+/* FEEDBACK */
+#feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.container p {
+  display: block;
+}
